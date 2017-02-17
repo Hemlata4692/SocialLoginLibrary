@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "FacebookConnect.h"
 #import "AppDelegate.h"
+#import "FacebookConnect.h"
+#import "GmailSignInConnect.h"
+#import "TwitterLoginConnect.h"
 
 #define myDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
@@ -68,11 +70,29 @@
 
 #pragma mark - Login with twitter
 - (IBAction)loginTwitter:(id)sender {
+    TwitterLoginConnect *twitterConnect = [[TwitterLoginConnect alloc]init];
+    twitterConnect.delegate = self;
+    [twitterConnect twitterLoginWithPermission:self];
+}
+
+//twitter delegate method
+- (void)twitterLoginWithPermissions:(id)twitterResult status:(int)status {
+    if (status == 1) {
+        [myDelegate stopIndicator];
+        //fetched data from twitter login
+        DLog(@"twitterResult is %@", twitterResult);
+    }
+    else {
+        [myDelegate stopIndicator];
+        //show alert if error occured
+    }
 }
 #pragma mark - end
 
+#pragma mark - Login with gmail
 - (IBAction)loginGmail:(id)sender {
 }
+
 #pragma mark - end
 
 @end

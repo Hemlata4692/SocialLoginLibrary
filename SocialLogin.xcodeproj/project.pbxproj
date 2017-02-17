@@ -14,10 +14,28 @@
 		B74B22EE1E4C4F2C002797E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74B22ED1E4C4F2C002797E6 /* Assets.xcassets */; };
 		B74B22F11E4C4F2C002797E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74B22EF1E4C4F2C002797E6 /* LaunchScreen.storyboard */; };
 		B761EA911E51706B00AC880D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761EA901E51706B00AC880D /* FBSDKLoginKit.framework */; };
-		B761EA951E5175BD00AC880D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761EA941E5175BD00AC880D /* FBSDKCoreKit.framework */; };
 		B761EA9B1E5178EE00AC880D /* FacebookConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = B761EA9A1E5178EE00AC880D /* FacebookConnect.m */; };
 		B761EAA01E517FA600AC880D /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = B761EA9F1E517FA600AC880D /* MMMaterialDesignSpinner.m */; };
 		B761EAA21E5186C600AC880D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761EAA11E5186C600AC880D /* Bolts.framework */; };
+		B761EAA71E51DF7F00AC880D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761EAA61E51DF7F00AC880D /* FBSDKCoreKit.framework */; };
+		B782B7321E52C7A000BA08B2 /* GmailSignInConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = B782B7311E52C7A000BA08B2 /* GmailSignInConnect.m */; };
+		B7A010221E5439210063744C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A010211E5439210063744C /* GoogleService-Info.plist */; };
+		B7A010231E5450FF0063744C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A00FEE1E5408F30063744C /* SystemConfiguration.framework */; };
+		B7A010241E5451060063744C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A00FF21E5409030063744C /* AddressBook.framework */; };
+		B7A010251E54510C0063744C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A00FF01E5408FD0063744C /* StoreKit.framework */; };
+		B7A010271E54519D0063744C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A010261E54519D0063744C /* libz.tbd */; };
+		B7A0102C1E5460A50063744C /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7A0102A1E5460A50063744C /* GoogleSignIn.bundle */; };
+		B7A0102D1E5460A50063744C /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A0102B1E5460A50063744C /* GoogleSignIn.framework */; };
+		B7A010311E5462480063744C /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A010301E5462480063744C /* GoogleAppUtilities.framework */; };
+		B7A010331E54624D0063744C /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A010321E54624D0063744C /* GoogleSymbolUtilities.framework */; };
+		B7A010351E5462720063744C /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A010341E5462720063744C /* GoogleSignInDependencies.framework */; };
+		B7A010381E5474580063744C /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A0102E1E5461980063744C /* SafariServices.framework */; };
+		B7A010391E547A010063744C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A010361E54627F0063744C /* libc++.tbd */; };
+		B7A139531E55C98A009506F4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A1394F1E55C98A009506F4 /* Fabric.framework */; };
+		B7A139541E55C98A009506F4 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A139501E55C98A009506F4 /* TwitterKit.framework */; };
+		B7A139551E55C98A009506F4 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7A139511E55C98A009506F4 /* TwitterKitResources.bundle */; };
+		B7A139561E55C98A009506F4 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A139521E55C98A009506F4 /* TwitterCore.framework */; };
+		B7A139591E55CB7E009506F4 /* TwitterLoginConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A139581E55CB7E009506F4 /* TwitterLoginConnect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +50,32 @@
 		B74B22F01E4C4F2C002797E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B74B22F21E4C4F2C002797E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B761EA901E51706B00AC880D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		B761EA941E5175BD00AC880D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B761EA991E5178EE00AC880D /* FacebookConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookConnect.h; sourceTree = "<group>"; };
 		B761EA9A1E5178EE00AC880D /* FacebookConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookConnect.m; sourceTree = "<group>"; };
 		B761EA9E1E517FA600AC880D /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
 		B761EA9F1E517FA600AC880D /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		B761EAA11E5186C600AC880D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B761EAA61E51DF7F00AC880D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B782B7301E52C7A000BA08B2 /* GmailSignInConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GmailSignInConnect.h; sourceTree = "<group>"; };
+		B782B7311E52C7A000BA08B2 /* GmailSignInConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GmailSignInConnect.m; sourceTree = "<group>"; };
+		B7A00FEE1E5408F30063744C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B7A00FF01E5408FD0063744C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B7A00FF21E5409030063744C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		B7A010211E5439210063744C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7A010261E54519D0063744C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B7A0102A1E5460A50063744C /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		B7A0102B1E5460A50063744C /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		B7A0102E1E5461980063744C /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		B7A010301E5462480063744C /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		B7A010321E54624D0063744C /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		B7A010341E5462720063744C /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		B7A010361E54627F0063744C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B7A1394F1E55C98A009506F4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		B7A139501E55C98A009506F4 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
+		B7A139511E55C98A009506F4 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
+		B7A139521E55C98A009506F4 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
+		B7A139571E55CB7E009506F4 /* TwitterLoginConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterLoginConnect.h; sourceTree = "<group>"; };
+		B7A139581E55CB7E009506F4 /* TwitterLoginConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterLoginConnect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +83,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A010391E547A010063744C /* libc++.tbd in Frameworks */,
+				B7A010381E5474580063744C /* SafariServices.framework in Frameworks */,
+				B7A010271E54519D0063744C /* libz.tbd in Frameworks */,
+				B7A010251E54510C0063744C /* StoreKit.framework in Frameworks */,
+				B7A010241E5451060063744C /* AddressBook.framework in Frameworks */,
+				B7A010331E54624D0063744C /* GoogleSymbolUtilities.framework in Frameworks */,
+				B7A010231E5450FF0063744C /* SystemConfiguration.framework in Frameworks */,
+				B7A139531E55C98A009506F4 /* Fabric.framework in Frameworks */,
+				B7A010351E5462720063744C /* GoogleSignInDependencies.framework in Frameworks */,
 				B761EAA21E5186C600AC880D /* Bolts.framework in Frameworks */,
+				B7A010311E5462480063744C /* GoogleAppUtilities.framework in Frameworks */,
+				B7A139541E55C98A009506F4 /* TwitterKit.framework in Frameworks */,
+				B761EAA71E51DF7F00AC880D /* FBSDKCoreKit.framework in Frameworks */,
+				B7A139561E55C98A009506F4 /* TwitterCore.framework in Frameworks */,
 				B761EA911E51706B00AC880D /* FBSDKLoginKit.framework in Frameworks */,
-				B761EA951E5175BD00AC880D /* FBSDKCoreKit.framework in Frameworks */,
+				B7A0102D1E5460A50063744C /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +110,7 @@
 			children = (
 				B74B22E01E4C4F2C002797E6 /* LoginDemo */,
 				B74B22DF1E4C4F2C002797E6 /* Products */,
+				EADC38CC9A8C8ACFBCB17566 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +132,7 @@
 				B74B22ED1E4C4F2C002797E6 /* Assets.xcassets */,
 				B74B22EF1E4C4F2C002797E6 /* LaunchScreen.storyboard */,
 				B74B22F21E4C4F2C002797E6 /* Info.plist */,
+				B7A010211E5439210063744C /* GoogleService-Info.plist */,
 				B74B22E11E4C4F2C002797E6 /* Supporting Files */,
 			);
 			path = LoginDemo;
@@ -97,8 +150,17 @@
 		B761EA921E51756F00AC880D /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				B7A1394F1E55C98A009506F4 /* Fabric.framework */,
+				B7A139501E55C98A009506F4 /* TwitterKit.framework */,
+				B7A139511E55C98A009506F4 /* TwitterKitResources.bundle */,
+				B7A139521E55C98A009506F4 /* TwitterCore.framework */,
+				B7A010341E5462720063744C /* GoogleSignInDependencies.framework */,
+				B7A010321E54624D0063744C /* GoogleSymbolUtilities.framework */,
+				B7A010301E5462480063744C /* GoogleAppUtilities.framework */,
+				B7A0102A1E5460A50063744C /* GoogleSignIn.bundle */,
+				B7A0102B1E5460A50063744C /* GoogleSignIn.framework */,
+				B761EAA61E51DF7F00AC880D /* FBSDKCoreKit.framework */,
 				B761EAA11E5186C600AC880D /* Bolts.framework */,
-				B761EA941E5175BD00AC880D /* FBSDKCoreKit.framework */,
 				B761EA901E51706B00AC880D /* FBSDKLoginKit.framework */,
 			);
 			name = Framework;
@@ -126,8 +188,8 @@
 		B761EA971E5178BC00AC880D /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
-				B761EAA51E51C44200AC880D /* TwitterLogin */,
 				B761EAA41E51C43C00AC880D /* GmailLogin */,
+				B761EAA51E51C44200AC880D /* TwitterLogin */,
 				B761EA981E5178CD00AC880D /* FacebookLogin */,
 			);
 			name = HelperClasses;
@@ -162,6 +224,8 @@
 		B761EAA41E51C43C00AC880D /* GmailLogin */ = {
 			isa = PBXGroup;
 			children = (
+				B782B7301E52C7A000BA08B2 /* GmailSignInConnect.h */,
+				B782B7311E52C7A000BA08B2 /* GmailSignInConnect.m */,
 			);
 			name = GmailLogin;
 			sourceTree = "<group>";
@@ -169,8 +233,23 @@
 		B761EAA51E51C44200AC880D /* TwitterLogin */ = {
 			isa = PBXGroup;
 			children = (
+				B7A139571E55CB7E009506F4 /* TwitterLoginConnect.h */,
+				B7A139581E55CB7E009506F4 /* TwitterLoginConnect.m */,
 			);
 			name = TwitterLogin;
+			sourceTree = "<group>";
+		};
+		EADC38CC9A8C8ACFBCB17566 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7A010361E54627F0063744C /* libc++.tbd */,
+				B7A0102E1E5461980063744C /* SafariServices.framework */,
+				B7A010261E54519D0063744C /* libz.tbd */,
+				B7A00FF21E5409030063744C /* AddressBook.framework */,
+				B7A00FF01E5408FD0063744C /* StoreKit.framework */,
+				B7A00FEE1E5408F30063744C /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +262,7 @@
 				B74B22DA1E4C4F2C002797E6 /* Sources */,
 				B74B22DB1E4C4F2C002797E6 /* Frameworks */,
 				B74B22DC1E4C4F2C002797E6 /* Resources */,
+				B77CE57F1E55C71500E662DC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,6 +284,7 @@
 				TargetAttributes = {
 					B74B22DD1E4C4F2C002797E6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T7GN63HCDX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -232,23 +313,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				B74B22F11E4C4F2C002797E6 /* LaunchScreen.storyboard in Resources */,
+				B7A0102C1E5460A50063744C /* GoogleSignIn.bundle in Resources */,
+				B7A010221E5439210063744C /* GoogleService-Info.plist in Resources */,
 				B74B22EE1E4C4F2C002797E6 /* Assets.xcassets in Resources */,
+				B7A139551E55C98A009506F4 /* TwitterKitResources.bundle in Resources */,
 				B74B22EC1E4C4F2C002797E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B77CE57F1E55C71500E662DC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ac9f28f00658e1a1d50a62453bf18354b7df852f b6ccfe81ec04f71d0a208a21c579e726593c71594fc07f1e4abbc75f4c634c07";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B74B22DA1E4C4F2C002797E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A139591E55CB7E009506F4 /* TwitterLoginConnect.m in Sources */,
 				B761EAA01E517FA600AC880D /* MMMaterialDesignSpinner.m in Sources */,
 				B761EA9B1E5178EE00AC880D /* FacebookConnect.m in Sources */,
 				B74B22E91E4C4F2C002797E6 /* ViewController.m in Sources */,
 				B74B22E61E4C4F2C002797E6 /* AppDelegate.m in Sources */,
 				B74B22E31E4C4F2C002797E6 /* main.m in Sources */,
+				B782B7321E52C7A000BA08B2 /* GmailSignInConnect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,12 +470,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T7GN63HCDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SocialLogin",
+					"$(PROJECT_DIR)/LoginDemo",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.LoginLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -383,12 +490,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T7GN63HCDX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SocialLogin",
+					"$(PROJECT_DIR)/LoginDemo",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ranosys.LoginLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "MMMaterialDesignSpinner.h"
+#import <GoogleSignIn/GoogleSignIn.h>
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
+
 
 @interface AppDelegate ()
 {
@@ -56,7 +60,10 @@
     //connect appdelegate to facebook delegate
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
-    // Add any custom logic here.
+    
+    //twitter sign in
+    [Fabric with:@[[Twitter class]]];
+    
     return YES;
 }
 
@@ -88,17 +95,60 @@
 }
 #pragma mark - end
 
-#pragma mark - Facebook delegate method
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    
-    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                                  openURL:url
-                                                        sourceApplication:sourceApplication
-                                                               annotation:annotation
-                    ];
-    // Add any custom logic here.
-    return handled;
+//#pragma mark - Facebook open url connection
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    
+//    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                                                  openURL:url
+//                                                        sourceApplication:sourceApplication
+//                                                               annotation:annotation
+//                    ];
+//    return handled;
+//}
+//#pragma mark - end
+
+#pragma mark - Google Sign-in open url connection
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:sourceApplication
+                                      annotation:annotation];
 }
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options NS_AVAILABLE_IOS(9_0)
+//{
+//    return [self application:app
+//        processOpenURLAction:url
+//           sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+//                  annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+//                  iosVersion:9];
+//}
+//
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    return [self application:application
+//        processOpenURLAction:url
+//           sourceApplication:sourceApplication
+//                  annotation:annotation
+//                  iosVersion:8];
+//}
+//
+//- (BOOL)application:(UIApplication *)application processOpenURLAction:(NSURL*)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation iosVersion:(int)version
+//{
+//    return [[GIDSignIn sharedInstance] handleURL:url
+//                               sourceApplication:sourceApplication
+//                                      annotation:annotation];
+//}
 #pragma mark - end
 @end
