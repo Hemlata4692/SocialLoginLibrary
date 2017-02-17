@@ -19,6 +19,5 @@
     id <FacebookDelegate> _delegate;
 }
 @property (nonatomic,strong) id delegate;
-
 - (void)facebookLoginWithReadPermission:(UIViewController *)selfVC;
 @end
