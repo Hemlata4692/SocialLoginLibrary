@@ -14,12 +14,15 @@
 
 #define myDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
+//google client id
+#define kClientID    @"203484340022-n7i72bu9h19efaspim5cqb1fc18uvtlc.apps.googleusercontent.com"
+
 #ifdef DEBUG
 #define DLog(fmt, ...) NSLog((@"%s [Line %d] ---" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define DLog(...)
 #endif
-@interface ViewController ()<FacebookDelegate>
+@interface ViewController ()<FacebookDelegate,GIDSignInDelegate,GIDSignInUIDelegate>
 
 @end
 
@@ -45,7 +48,7 @@
     [fbConnectObject facebookLoginWithReadPermission:self];
 }
 
-//facebook delegate method
+//facebook delegate method to fetch user data
 - (void) facebookLoginWithReadPermissionResponse:(id)fbResult status:(int)status {
     if (status == 1) {
         [myDelegate stopIndicator];
@@ -75,7 +78,7 @@
     [twitterConnect twitterLoginWithPermission:self];
 }
 
-//twitter delegate method
+//twitter delegate method to fetch user data
 - (void)twitterLoginWithPermissions:(id)twitterResult status:(int)status {
     if (status == 1) {
         [myDelegate stopIndicator];
@@ -91,8 +94,27 @@
 
 #pragma mark - Login with gmail
 - (IBAction)loginGmail:(id)sender {
+    GmailSignInConnect *gmailConnect = [[GmailSignInConnect alloc]init];
+    [GIDSignIn sharedInstance].delegate=self;
+    [GIDSignIn sharedInstance].uiDelegate = self;
+    [gmailConnect gmailLoginWithPermission:self NSString:kClientID];
 }
 
+//google sign in delegate to fetch user data
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)gmailResult withError:(NSError *)error {
+    [[GIDSignIn sharedInstance] signOut];
+    DLog(@"gmail userId is %@", gmailResult.userID);
+    DLog(@"gmail name is %@", gmailResult.profile.name);
+    DLog(@"gmail email is %@", gmailResult.profile.email);
+    DLog(@"gmail has image is %d", gmailResult.profile.hasImage);
+    if (gmailResult.profile.hasImage) {
+        NSURL *ImageURL = [gmailResult.profile imageURLWithDimension:200];
+        DLog(@"user image URL : %@",ImageURL);
+    }
+    DLog(@"gmail given name is %@", gmailResult.profile.givenName);
+    DLog(@"gmail family name is %@", gmailResult.profile.familyName);
+    DLog(@"gmail auth token is %@", gmailResult.authentication.idToken);
+}
 #pragma mark - end
 
 @end

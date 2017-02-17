@@ -10,5 +10,12 @@
 #import <UIKit/UIKit.h>
 #import <GoogleSignIn/GoogleSignIn.h>
 
-@interface GmailSignInConnect : NSObject
+
+
+@interface GmailSignInConnect : NSObject<GIDSignInUIDelegate> {
+}
+
+@property (nonatomic,strong) id delegate;
+- (void)gmailLoginWithPermission:(UIViewController *)selfVC NSString:(NSString *)clientId;
+
 @end
