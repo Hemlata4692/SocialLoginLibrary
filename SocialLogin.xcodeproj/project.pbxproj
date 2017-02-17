@@ -18,6 +18,9 @@
 		B761EAA01E517FA600AC880D /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = B761EA9F1E517FA600AC880D /* MMMaterialDesignSpinner.m */; };
 		B761EAA21E5186C600AC880D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761EAA11E5186C600AC880D /* Bolts.framework */; };
 		B761EAA71E51DF7F00AC880D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761EAA61E51DF7F00AC880D /* FBSDKCoreKit.framework */; };
+		B78032BA1E5712CF00A8EE6A /* FacebookLoginReadME.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B78032B91E5712CF00A8EE6A /* FacebookLoginReadME.rtf */; };
+		B78032BC1E5712D700A8EE6A /* GoogleLoginReadME.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B78032BB1E5712D700A8EE6A /* GoogleLoginReadME.rtf */; };
+		B78032BE1E5712DF00A8EE6A /* TwitterLoginReadME.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B78032BD1E5712DF00A8EE6A /* TwitterLoginReadME.rtf */; };
 		B782B7321E52C7A000BA08B2 /* GmailSignInConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = B782B7311E52C7A000BA08B2 /* GmailSignInConnect.m */; };
 		B7A010221E5439210063744C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A010211E5439210063744C /* GoogleService-Info.plist */; };
 		B7A010231E5450FF0063744C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A00FEE1E5408F30063744C /* SystemConfiguration.framework */; };
@@ -56,6 +59,9 @@
 		B761EA9F1E517FA600AC880D /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		B761EAA11E5186C600AC880D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B761EAA61E51DF7F00AC880D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B78032B91E5712CF00A8EE6A /* FacebookLoginReadME.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FacebookLoginReadME.rtf; sourceTree = "<group>"; };
+		B78032BB1E5712D700A8EE6A /* GoogleLoginReadME.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = GoogleLoginReadME.rtf; sourceTree = "<group>"; };
+		B78032BD1E5712DF00A8EE6A /* TwitterLoginReadME.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = TwitterLoginReadME.rtf; sourceTree = "<group>"; };
 		B782B7301E52C7A000BA08B2 /* GmailSignInConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GmailSignInConnect.h; sourceTree = "<group>"; };
 		B782B7311E52C7A000BA08B2 /* GmailSignInConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GmailSignInConnect.m; sourceTree = "<group>"; };
 		B7A00FEE1E5408F30063744C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -198,6 +204,7 @@
 		B761EA981E5178CD00AC880D /* FacebookLogin */ = {
 			isa = PBXGroup;
 			children = (
+				B78032B91E5712CF00A8EE6A /* FacebookLoginReadME.rtf */,
 				B761EA991E5178EE00AC880D /* FacebookConnect.h */,
 				B761EA9A1E5178EE00AC880D /* FacebookConnect.m */,
 			);
@@ -224,6 +231,7 @@
 		B761EAA41E51C43C00AC880D /* GmailLogin */ = {
 			isa = PBXGroup;
 			children = (
+				B78032BB1E5712D700A8EE6A /* GoogleLoginReadME.rtf */,
 				B782B7301E52C7A000BA08B2 /* GmailSignInConnect.h */,
 				B782B7311E52C7A000BA08B2 /* GmailSignInConnect.m */,
 			);
@@ -233,6 +241,7 @@
 		B761EAA51E51C44200AC880D /* TwitterLogin */ = {
 			isa = PBXGroup;
 			children = (
+				B78032BD1E5712DF00A8EE6A /* TwitterLoginReadME.rtf */,
 				B7A139571E55CB7E009506F4 /* TwitterLoginConnect.h */,
 				B7A139581E55CB7E009506F4 /* TwitterLoginConnect.m */,
 			);
@@ -312,11 +321,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78032BA1E5712CF00A8EE6A /* FacebookLoginReadME.rtf in Resources */,
 				B74B22F11E4C4F2C002797E6 /* LaunchScreen.storyboard in Resources */,
 				B7A0102C1E5460A50063744C /* GoogleSignIn.bundle in Resources */,
+				B78032BC1E5712D700A8EE6A /* GoogleLoginReadME.rtf in Resources */,
 				B7A010221E5439210063744C /* GoogleService-Info.plist in Resources */,
 				B74B22EE1E4C4F2C002797E6 /* Assets.xcassets in Resources */,
 				B7A139551E55C98A009506F4 /* TwitterKitResources.bundle in Resources */,
+				B78032BE1E5712DF00A8EE6A /* TwitterLoginReadME.rtf in Resources */,
 				B74B22EC1E4C4F2C002797E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

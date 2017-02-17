@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red196\green26\blue22;\red0\green0\blue0;\red170\green13\blue145;
+\red92\green38\blue153;\red63\green110\blue116;\red38\green71\blue75;\red46\green13\blue110;\red100\green56\blue32;
+}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c0\c0\c0;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c39100\c22000\c12500;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16060\viewh10620\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Gmail Login:
+\b0 \
+\
+1. Use the below link to create your application on GoogleDeveloper\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://developers.facebook.com/docs/facebook-login/ios"}}{\fldrslt \cf0 https://developers.google.com/identity/sign-in/ios/start }} >> GET A CONFIGURATION FILE and create your application at google developer console.\
+\
+2. Download the plist file from google developer console and rename it \'93GoogleService-Info.plist\'94.\
+\
+3. Download the latest Google Sign-in SDK from {\field{\*\fldinst{HYPERLINK "https://developers.google.com/identity/sign-in/ios/sdk/"}}{\fldrslt https://developers.google.com/identity/sign-in/ios/sdk/}}.\
+\
+4. Create Xcode project.\
+\
+5. Import GoogleSignInDependencies.framework, GoogleSymbolUtilities.framework, GoogleAppUtilities.framework, GoogleSignIn.bundle and GoogleSignIn.framework in your Xcode project.\
+\
+6. Add \'93GoogleService-Info.plist\'94 in your Xcode project.\
+\
+7. Go to your info.plist >> URL types >> URL Schemes >> add bundle identifier.\
+\
+8. Go to your info.plist >> URL types >> URL Schemes >> add your REVERSED_CLIENT_ID from \'93GoogleService-Info.plist\'94,\
+\
+9. In your AppDelegate.m import \'93
+\f1\fs22 \cf2 \CocoaLigature0 <GoogleSignIn/GoogleSignIn.h>
+\f0\fs24 \cf0 \CocoaLigature1 \'94.\
+\
+10. Add the following method in AppDelegate.m file\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \CocoaLigature0 	- (\cf4 BOOL\cf3 )application:(\cf5 UIApplication\cf3  *)app\
+            openURL:(\cf5 NSURL\cf3  *)url\
+            options:(\cf5 NSDictionary\cf3  *)options \{\
+    \cf4 return\cf3  [[\cf6 GIDSignIn\cf3  \cf7 sharedInstance\cf3 ] \cf7 handleURL\cf3 :url\
+	\cf7 sourceApplication\cf3 :options[\cf5 UIApplicationOpenURLOptionsSourceApplicationKey\cf3 ]\
+	\cf7 annotation\cf3 :options[\cf5 UIApplicationOpenURLOptionsAnnotationKey\cf3 ]];\
+\}\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0 \cf3 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\fs24 \cf3 11. Add GmailSignInConnect.h and GmailSignInConnect.m file in your project.\
+\
+12. I\cf0 \CocoaLigature1 n your ViewController.h\
+\
+	12.1. Import \'93GmailSignInConnect.h\'94 and include <GIDSigninDelegate, GIDSignInUIDelegate> \
+	12.2. Add following code on your gmail login button:\
+
+\f1\fs22 \cf3 \CocoaLigature0  		\cf6 GmailSignInConnect\cf3  *gmailConnect = [[\cf6 GmailSignInConnect\cf3  \cf8 alloc\cf3 ]\cf8 init\cf3 ];\
+    		[\cf6 GIDSignIn\cf3  \cf7 sharedInstance\cf3 ].\cf6 delegate\cf3 =\cf4 self\cf3 ;\
+    		[\cf6 GIDSignIn\cf3  \cf7 sharedInstance\cf3 ].\cf6 uiDelegate\cf3  = \cf4 self\cf3 ;\
+    		[gmailConnect \cf7 gmailLoginWithPermission\cf3 :\cf4 self\cf3  \cf7 NSString\cf3 :\cf9 kClientID\cf3 ];\
+		//\cf9 kClientID: Pass the CLIENT_ID from GoogleService-info.plist.\
+\
+
+\f0\fs24 \cf3 13. Implement google sign-in delegate to get user data:\
+
+\f1\fs22 	- (\cf4 void\cf3 )signIn:(\cf6 GIDSignIn\cf3  *)signIn didSignInForUser:(\cf6 GIDGoogleUser\cf3 *)gmailResult withError:(\cf5 NSError\cf3  *)error;}

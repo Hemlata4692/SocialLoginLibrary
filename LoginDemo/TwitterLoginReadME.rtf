@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red38\green38\blue38;\red31\green125\blue177;
+\red0\green0\blue0;\red255\green0\blue0;\red153\green102\blue51;\red196\green26\blue22;\red63\green110\blue116;
+\red38\green71\blue75;\red28\green0\blue207;\red46\green13\blue110;\red170\green13\blue145;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c100000\c100000\c100000;\cssrgb\c20000\c20000\c20000;\cssrgb\c13333\c56471\c74902;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c100000\c0\c0;\csgenericrgb\c60000\c40000\c20000;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c24700\c43100\c45600;
+\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c66500\c5200\c56900;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb2 Twitter Login with Fabric:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 1. Use the below link to create your application on twitter developer\
+{\field{\*\fldinst{HYPERLINK "https://apps.twitter.com/"}}{\fldrslt https://apps.twitter.com/}} and you will get Consumer Key(Api key) and Consumer Secret. \
+\
+2. In settings check \'93\cf3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Allow this application to be used to {\field{\*\fldinst{HYPERLINK "https://dev.twitter.com/docs/auth/sign-twitter"}}{\fldrslt \cf4 \strokec4 Sign in with Twitter}}\cf4 \strokec4 \'94 \cf5 must be checked. If user needs to fetch email address go to Permissions tab >> Additional Permissions >> tick the check box Request email addresses from users.\
+\
+3. Create your Xcode project.\
+\
+4. Go to Fabric app
+\fs26 \cf6 *
+\fs24 \cf5  >> New App >> Browse >> open your Xcode project >> Select your organisation >> Select TwitterKit to install.\
+\
+5. Go to your Xcode project targets >> Add a run script phase >> paste the following code \
+	.\'94\cf7 /Fabric.framework/run ac9f28f00658e1a1d50a62453bf18354b7df852f 	b6ccfe81ec04f71d0a208a21c579e726593c71594fc07f1e4abbc75f4c634c07\cf5 \'94.\
+\
+6. Build your Xcode project >> Drag the framework in your project.\
+\
+7. Go to info.plist >> Fabric >>  Kits >> KitsInfo >> add your own consumer key and consumer secret (replace the one given by fabric).\
+\
+8. Import 
+\f1\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \'93\cf6 <Fabric/Fabric.h>\cf5 \'94 and \'93\cf6 <TwitterKit/TwitterKit.h>\cf5 \'94.\cf8  
+\f0\fs24 \cf5 \cb2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec4 Add the following code in your AppDelegate.m:\
+	
+\f1\fs22 \cf5 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 [\cf9 Fabric\cf5  \cf10 with\cf5 :\cf11 @[\cf5 [\cf9 Twitter\cf5  \cf12 class\cf5 ]\cf11 ]\cf5 ];\
+
+\f0\fs24 \
+9. Import TwitterLoginConnect.h and TwitterLoginConnect.m in your Xcode project.\
+\cf5 \cb2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec4 \
+10. In your ViewController.h file\
+	10.1. Import \'93
+\f1\fs22 \cf8 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 TwitterLoginConnect.h
+\f0\fs24 \cf5 \cb2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec4 \'94.\
+	10.2. Add the following code in your twitter login button:\
+		
+\f1\fs22 \cf9 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 TwitterLoginConnect\cf5  *twitterConnect = [[\cf9 TwitterLoginConnect\cf5  \cf12 alloc\cf5 ]\cf12 init\cf5 ];\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+\cf5     		twitterConnect.\cf9 delegate\cf5  = \cf13 self\cf5 ;\
+    		[twitterConnect \cf10 twitterLoginWithPermission\cf5 :\cf13 self\cf5 ];\
+
+\f0\fs24 	10.3 Implement twitter delegate to get user data:\
+		
+\f1\fs22 - (\cf13 void\cf5 )twitterLoginWithPermissions:(\cf13 id\cf5 )twitterResult status:(\cf13 int\cf5 )status;\
+\
+
+\f0\fs26 \cf6 *\cf5 Install the fabric app from the link: {\field{\*\fldinst{HYPERLINK "https://www.fabric.io/downloads/apple"}}{\fldrslt https://www.fabric.io/downloads/apple}}. Create fabric Id to login in the application.\
+\
+
+\b Note
+\b0 : One can also get Fabric and TwitterKit framework using pods from link: {\field{\*\fldinst{HYPERLINK "https://fabric.io/kits/ios/twitterkit/install"}}{\fldrslt https://fabric.io/kits/ios/twitterkit/install}}. And follow the same steps from step 5.
+\fs24 \cf5 \cb2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec4 \
+}
