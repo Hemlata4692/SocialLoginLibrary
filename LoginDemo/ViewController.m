@@ -102,7 +102,9 @@
 
 //google sign in delegate to fetch user data
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)gmailResult withError:(NSError *)error {
+    //logout user from gmail
     [[GIDSignIn sharedInstance] signOut];
+    //fetch user data
     DLog(@"gmail userId is %@", gmailResult.userID);
     DLog(@"gmail name is %@", gmailResult.profile.name);
     DLog(@"gmail email is %@", gmailResult.profile.email);

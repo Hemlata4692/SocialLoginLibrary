@@ -14,7 +14,6 @@
 
 #pragma mark - Facebook login with read permission
 - (void)facebookLoginWithReadPermission:(UIViewController *)selfVC {
-
     [FBSDKAccessToken setCurrentAccessToken:nil];
     [FBSDKProfile setCurrentProfile:nil];
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
@@ -58,4 +57,7 @@
      }];
 }
 #pragma mark - end
+
+//Logout from facebook
+//[[FBSDKLoginManager new] logOut];
 @end
