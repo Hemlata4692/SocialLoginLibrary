@@ -28,6 +28,7 @@
 // Whether or not the user has profile image.
 @property(nonatomic, readonly) BOOL hasImage;
 
+
 // Gets the user's profile image URL for the given dimension in pixels for each side of the square.
 - (NSURL *)imageURLWithDimension:(NSUInteger)dimension;
 

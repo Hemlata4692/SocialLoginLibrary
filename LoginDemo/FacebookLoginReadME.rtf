@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red196\green26\blue22;\red0\green0\blue0;\red0\green116\blue0;
+\red63\green110\blue116;\red38\green71\blue75;\red170\green13\blue145;\red92\green38\blue153;\red46\green13\blue110;
+}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c0\c0\c0;\csgenericrgb\c0\c45600\c0;
+\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c18100\c5200\c43100;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16140\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Facebook Login:\
+\
+1. Use the below link to create your application on Facebook developers\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://developers.facebook.com/docs/facebook-login/ios"}}{\fldrslt \cf0 https://developers.facebook.com/docs/facebook-login/ios}}\
+\
+2. To make your application public:\
+	2.1 Go to Facebook developer.\
+	2.2 Find you application and open.\
+	2.3 Go to App Review tab > enable the with under Make <Application_Name> public.\
+\
+3. Download the Facebook SDK from {\field{\*\fldinst{HYPERLINK "https://developers.facebook.com/docs/facebook-login/ios"}}{\fldrslt https://developers.facebook.com/docs/facebook-login/ios}}\
+\
+4. Create your Xcode project.\
+\
+5. Copy FBSDKCoreKit.framework, FBSDKLoginKit.framework and Bolts.framework in your Xcode project.\
+\
+6. Go to your info.plist >> URL types >> URL Schemes >> fb<Facebook AppID>\
+\
+7. Go to your info.plist >> FacebookAppID >> <Facebook AppID>\
+\
+8.  Go to your info.plist >> FacebookDisplayName >> <Application Display Name>\
+\
+9. Drag FacebookConnect.h and FacebookConnect.m to you project.\
+\
+10. Import \'93
+\f1\fs22 \cf2 \CocoaLigature0 <FBSDKCoreKit/FBSDKCoreKit.h>\cf3 \'94 in AppDelegate.m\
+\
+11. 
+\f0\fs24 Add the following code in didFininshLaunchingWithOptions method in AppDelegate.m
+\f1\fs22 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+\cf4 //connect appdelegate to facebook delegate\cf3 \
+    [[\cf5 FBSDKApplicationDelegate\cf3  \cf6 sharedInstance\cf3 ] \cf6 application\cf3 :application\
+                             \cf6 didFinishLaunchingWithOptions\cf3 :launchOptions];\
+\
+12. 
+\f0\fs24 Add following URL Connection method in AppDelegate.m
+\f1\fs22 \
+	- (\cf7 BOOL\cf3 )application:(\cf8 UIApplication\cf3  *)application openURL:(\cf8 NSURL\cf3  *)url\
+  	sourceApplication:(\cf8 NSString\cf3  *)sourceApplication annotation:(\cf7 id\cf3 )annotation \{\
+    \cf7 BOOL\cf3  handled = [[\cf5 FBSDKApplicationDelegate\cf3  \cf6 sharedInstance\cf3 ] \cf6 application\cf3 :application \cf6 openURL\cf3 :url 							\cf6 sourceApplication\cf3 :sourceApplication \cf6 annotation\cf3 :annotation];\
+    \cf7 return\cf3  handled;\
+\}\
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 13. In your ViewController.h\
+\
+	13.1. Import \'93FacebookConnect.h\'94 and include it\'92s delegate <FacebookDelegate>\
+	13.2. Add following code in you Facebook login button:\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \CocoaLigature0  	 	\cf5 FacebookConnect\cf3  *fbConnectObject = [[\cf5 FacebookConnect\cf3  \cf9 alloc\cf3 ]\cf9 init\cf3 ];\
+  		fbConnectObject.\cf5 delegate\cf3  = \cf7 self\cf3 ;\
+ 		[fbConnectObject \cf6 facebookLoginWithReadPermission\cf3 :\cf7 self\cf3 ];\
+	
+\f0\fs24 13.3. Now implement Facebook delegate method to get user Result\
+
+\f1\fs22 		- (\cf7 void\cf3 ) facebookLoginWithReadPermissionResponse:(\cf7 id\cf3 )fbResult status:	(\cf7 int\cf3 )status;\
+}
